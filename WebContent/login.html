@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메모리헬퍼-MEMORYHELPER</title>
+<link type="text/css" rel="stylesheet" href="default.css">
+<style>
+	html, body {
+    background-image: url(media/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	}
+
+	section {
+        width : 850px;
+        height : 300px;
+        margin : 0 auto;
+		background-color : black;
+		top: 400px;
+		left: 800px;
+		position: fixed;
+		font-size: 1.6em;
+		
+	}
+
+    form {
+        text-align: left;
+        padding-top: 25px;
+        color:white;
+    }
+
+    #label {
+        text-align: left;
+    }
+
+    #under {
+        text-align: right;
+        padding-top: 7%;
+    }
+
+    th {
+        font-size :150%;
+    }
+    table {
+        display: inline-block;
+    }
+    button, input[type=submit] {
+    	width:120px;
+    	height:50px;
+    	font-size: 1.1em;
+    	background-color:#9BE1E1;
+    	color:black;
+    }
+    button:hover, input[type=submit]:hover {
+    	box-shadow: 5px 5px 2px 1px #9BE1E1;
+    }
+    input[type=text], input[type=password]{
+    	width:700px;
+    	height: 50px;
+    	font-size: 1.6em;
+    }
+</style>
+<script>
+ function check(){
+ var referrer = document.referrer;
+ if(referrer == 'http://localhost:8080/MEMORYHELPER/login.jsp'){
+	 alert(referrer);	 
+ }
+ 
+ }
+</script>
+</head>
+<body onload="check()">
+    <section>
+        
+	<form method="get" action="login.jsp">
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td id="label"> 아이디 : </td>
+                    <td> <input type="text" name="id"> </td>
+                </tr>
+                <tr>
+                    <td id="label"> 비밀번호 : </td>
+                    <td> <input type="password" name="pw"> </td>
+                </tr>
+                <tr>
+                    <td id="under" colspan="2"> <input type="submit" value="로그인"> 
+                        <button type="button" onclick="location.href='join.html'">회원가입</button></td>
+                </tr>
+            </tbody>
+        </table>
+	</form>
+    </section>
+</body>
+</html>
